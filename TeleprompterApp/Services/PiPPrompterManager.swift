@@ -320,6 +320,10 @@ extension PiPPrompterManager: AVPictureInPictureControllerDelegate {
 
 // MARK: - AVPictureInPictureSampleBufferPlaybackDelegate
 extension PiPPrompterManager: AVPictureInPictureSampleBufferPlaybackDelegate {
+    func pictureInPictureControllerIsPlaybackPaused(_ pictureInPictureController: AVPictureInPictureController) -> Bool {
+        return !isPlaying
+    }
+    
     func pictureInPictureController(_ pictureInPictureController: AVPictureInPictureController, setPlaying playing: Bool) {
         if playing {
             startScrolling()

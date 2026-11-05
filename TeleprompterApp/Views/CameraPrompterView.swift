@@ -76,7 +76,7 @@ struct CameraPrompterView: View {
     private var prompterOverlayView: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 18)
-                .fill(Color.black.withAlphaComponent(0.65))
+                .fill(Color.black.opacity(0.65))
                 .overlay(
                     RoundedRectangle(cornerRadius: 18)
                         .stroke(Color.white.opacity(0.15), lineWidth: 1)
